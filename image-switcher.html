@@ -11,13 +11,17 @@
     
         }
 
+        .app-title{
+            text-align: center;
+        }
+
         .img-flower{
             height: 150px;
-            width: 200px;
+            display: block;
+            margin: 10px auto;
             display: block;
             margin: 10px auto;
             padding: 20px;
-            
 
         }
 
@@ -33,37 +37,38 @@
             cursor: pointer;
             background-color: salmon;
             border-radius: 20px;
-            
         }
 
     </style>
 </head>
-<body>
-    <h1 class="app-title">Flower-Blossoming🤍</h1>
+<h1 class="app-title">Flower-Blossoming🤍</h1>
 
-    <img src="./flower1.png" class="img-flower" id="img-flower"/>
+<img src="./flower1.png" class="img-flower" id="img-flower" />
 
-    <div class="btn-container">
-        <button type="button" class="btn-toggle" onclick="toggleflower()">
-            Toggle🤍
-        </button>
+<div class="btn-container">
+    <button type="button" class="btn-toggle" onclick="toggleflower()">
+        Toggle🤍
+    </button>
 
-        
-    </div>
 
-    <script>
+</div>
 
-    function toggleflower(){
+<script>
+
+    function toggleflower() {
 
         const flowerElement = document.getElementById("img-flower")
 
         flowerElement.src = flowerElement.src.includes("flower1.png") ?
-        "./flower2.png": "./flower1.png" 
-    
+            "./flower2.png" : "./flower1.png"
+
 
     }
 
-    </script>
+</script>
+
+ 
+</script>
 
 </body>
 </html>
