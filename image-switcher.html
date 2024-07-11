@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         .app-title{
             text-align: center;
+    
         }
 
         .img-flower{
             height: 150px;
+            width: 200px;
             display: block;
             margin: 10px auto;
+            padding: 20px;
+            
 
         }
 
@@ -24,35 +29,38 @@
         .btn-toggle{
             margin: 10px 30px;
             width: 100px;
+            height: 30px;
             cursor: pointer;
+            background-color: salmon;
+            border-radius: 20px;
+            
         }
 
     </style>
 </head>
 <body>
-    <h1 class="app-title">Flower-Blossoming</h1>
+    <h1 class="app-title">Flower-Blossoming🤍</h1>
 
     <img src="./flower1.png" class="img-flower" id="img-flower"/>
 
     <div class="btn-container">
-        <button type="button" class="btn-toggle" onclick="blossom()">
-            Blossom
+        <button type="button" class="btn-toggle" onclick="toggleflower()">
+            Toggle🤍
         </button>
 
-        <button type="button" class="btn-toggle" onclick="fade()">
-            Fade
-        </button>
+        
     </div>
 
     <script>
-        function blossom(){
-            const blossomElement = document.getElementById("img-flower")
-            blossomElement.src = "./flower2.png"
-        }
 
- function fade() {
-        const fadeElement = document.getElementById("img-flower")
-        fadeElement.src = "./flower1.png"
+    function toggleflower(){
+
+        const flowerElement = document.getElementById("img-flower")
+
+        flowerElement.src = flowerElement.src.includes("flower1.png") ?
+        "./flower2.png": "./flower1.png" 
+    
+
     }
 
     </script>
