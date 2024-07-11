@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app-title{
+            text-align: center;
+        }
+
+        .img-flower{
+            height: 150px;
+            display: block;
+            margin: 10px auto;
+
+        }
+
+        .btn-container{
+           justify-content: center;
+           display: flex;
+        }
+
+        .btn-toggle{
+            margin: 10px 30px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Flower-Blossoming</h1>
+
+    <img src="./flower1.png" class="img-flower" id="img-flower"/>
+
+    <div class="btn-container">
+        <button type="button" class="btn-toggle" onclick="blossom()">
+            Blossom
+        </button>
+
+        <button type="button" class="btn-toggle" onclick="fade()">
+            Fade
+        </button>
+    </div>
+
+    <script>
+        function blossom(){
+            const blossomElement = document.getElementById("img-flower")
+            blossomElement.src = "./flower2.png"
+        }
+
+ function fade() {
+        const fadeElement = document.getElementById("img-flower")
+        fadeElement.src = "./flower1.png"
+    }
+
+    </script>
+
+</body>
+</html>
